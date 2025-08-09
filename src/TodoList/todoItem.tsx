@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Task } from "../models/Task";
 import { TaskStatus } from "../models/task-completed-enum";
 import styles from "./todoItem.module.css";
+import ConfirmDialog from "./ConfirmDialog";
 
 interface TodoItemProps {
     task: Task;
@@ -37,16 +38,11 @@ export const TodoItem: React.FC<TodoItemProps> = ({ task, toggleTask, deleteTask
                 x
             </button>
             {showConfirm && (
-                <>
-                    <div className={styles.backdrop}></div>
-                    <div className={styles.confirmDialog}>
-                        <div className={styles.confirmText}>Are you sure you want to delete this task?</div>
-                        <div className={styles.confirmActions}>
-                            <button className="p-button" onClick={handleCancel}>Cancel</button>
-                            <button className="p-button--negative" onClick={handleConfirm}>Delete</button>
-                        </div>
-                    </div>
-                </>
+                <ConfirmDialog
+                    text="Are you sure you want to delete this task?"
+                    onCancel={handleCancel}
+                    onConfirm={handleConfirm}
+                />
             )}
         </li>
     )

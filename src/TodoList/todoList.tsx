@@ -29,8 +29,8 @@ export const TodoList: React.FC = () => {
     };
 
     return (
-        <div className="p-strip p-todo-container">
-            <h1 className='p-heading--4'>Todo List</h1>
+        <div className="p-strip p-todo-container u-no-margin--top">
+            <h1 className='p-heading--4 u-text--center'>Todo List</h1>
             <TodoInput input={input} setInput={setInput} addTask={addTask} />
             <ul className='p-todo-list'>
                 {

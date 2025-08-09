@@ -1,3 +1,1 @@
-// Import Vanilla Framework CSS from CDN
 import 'https://assets.ubuntu.com/v1/vanilla-framework-version-4.9.0.min.css';
-// ...existing code...

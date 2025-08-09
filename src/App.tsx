@@ -24,9 +24,9 @@ function App() {
         marginTop: 'auto',
         padding: '1rem 0',
         textAlign: 'center',
-        background: '#f8f8f8',
         fontSize: '1rem',
-        color: '#333',
+        width: '100%',
+        color: 'rgb(51,51,51)',
         borderTop: '1px solid #eee',
         borderRadius: '0 0 16px 16px',
       }}>
