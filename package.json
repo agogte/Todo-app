@@ -1,11 +1,10 @@
 {
   "name": "my-todo-app",
   "version": "0.1.0",
+  "author": "Advait Gogte",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.6.4",
-    "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.126",
@@ -14,14 +13,18 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-scripts": "5.0.1",
+    "sass": "^1.90.0",
     "typescript": "^4.9.5",
+    "vanilla-framework": "^4.29.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-css": "sass --load-path=node_modules src/scss:public/css --style=compressed",
+    "watch-css": "npm run build-css && sass --load-path=node_modules -w src/scss:public/css --style=compressed"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +43,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0"
   }
 }
