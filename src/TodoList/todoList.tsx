@@ -29,10 +29,10 @@ export const TodoList: React.FC = () => {
     };
 
     return (
-        <div className="p-strip p-todo-container u-no-margin--top">
-            <h1 className='p-heading--4 u-text--center'>Todo List</h1>
+        <div className="p-strip p-todo-container" style={{paddingTop: 0 }}>
+            <h1 className="p-heading--4 u-align--center" style={{ marginTop: 0 }}>Todo List</h1>
             <TodoInput input={input} setInput={setInput} addTask={addTask} />
-            <ul className='p-todo-list'>
+            <ul className="p-todo-list">
                 {
                     tasks.filter(task => !task.isDeleted).map(task => (
                         <TodoItem key={task.id} task={task} toggleTask={toggleTask} deleteTask={deleteTask} />

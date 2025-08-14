@@ -30,6 +30,8 @@ describe('TodoItem Component', () => {
     render(<TodoItem task={task} toggleTask={mockToggleTask} deleteTask={mockDeleteTask} />);
     const button = screen.getByRole('button', { name: /x/i });
     fireEvent.click(button);
+    const deleteButtons = screen.getAllByRole('button', { name: /delete/i });
+    fireEvent.click(deleteButtons[deleteButtons.length - 1]);
     expect(mockDeleteTask).toHaveBeenCalledWith(task.id);
   });
 });

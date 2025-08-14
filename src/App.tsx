@@ -5,18 +5,7 @@ import { TodoList } from './TodoList/todoList';
 
 function App() {
   return (
-    <div style={{
-      height: 600,
-      maxWidth: 480,
-      margin: '3rem auto',
-      background: '#fff',
-      borderRadius: 16,
-      boxShadow: '0 4px 24px rgba(0,0,0,0.10)',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'stretch',
-      padding: '2rem 1.5rem 0 1.5rem',
-    }}>
+  <div className="app-container-responsive">
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
         <TodoList />
       </div>
